@@ -45,7 +45,7 @@ import Aos from 'aos';
 export class SliderComponent implements OnInit {
   slides = [
     {
-      image: '/assets/Index/slider/La-Quinta-slider-1.jpg',
+      image: 'assets/Index/slider/La-Quinta-slider-1.jpg',
       number: '1',
     },
     {
