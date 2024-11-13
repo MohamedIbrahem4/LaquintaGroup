@@ -1,0 +1,140 @@
+<section>
+  <div class="header">
+  <h1 data-aos="zoom-in-up"  data-aos-easing="linear" data-aos-duration="1000">La Quinta Beach Hurghada</h1>
+  </div>
+  <div class="section-1 ">
+    <div class="box-1 container">
+   <h3 data-aos="fade-up" data-aos-anchor-placement="top-bottom">Overview</h3>
+    </div>
+    <div class="box-2 container">
+    <div class="content-1" data-aos="fade-right" data-aos-easing="ease-in-sine"      data-aos-offset="200"
+    >
+      <p-image
+      src="/assets/Home/overview-home-image.jpg"
+      previewImageSizes="/assets/Home/overview-home-image.jpg"
+      alt="img"
+      width="100%"
+      [preview]="true" />
+      </div>
+      <div class="content-2" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <b class="type1">
+          Discover a new gem of beachfront living in the heart of Hurghada, full of life, charm, and possibilities. La Quinta beach is an exclusive complex. It offers residential units, positioned in a unique location, and features breathtaking sea views, direct beach access, a vast list of luxury facilities and beautiful surroundings.
+        </b>
+        <p></p>
+    <p class="type2">
+      Located in the east of Egypt, bathed by the warm waters of the Red Sea and surrounded by the mountainous landscape of Hurghada, the beach city stretches for about 36 kilometers (22 mi) along the seashore.
+It’s blessed with sunny weather year-round, an average temperature of 23°C and little rain, which makes it the best place to own your beachfront home and establish your new life.
+    </p>
+      </div>
+      <div class="content-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+     <ul>
+      <li>
+        <span class="title">Status</span>
+        <span class="title2">Completed- More than 90% Sold</span>
+      </li>
+      <li>
+        <span class="title">Area</span>
+        <span class="title2">4,995 sqm        </span>
+      </li>
+      <li>
+        <span class="title">Location</span>
+        <span class="title2">Hurghada, Egypt        </span>
+      </li>
+      <li>
+        <span class="title">Type</span>
+        <span class="title2">Resort</span>
+      </li>
+      <li>
+        <span class="title">Beach</span>
+        <span class="title2">Private Beach
+        </span>
+      </li>
+
+     </ul>
+      </div>
+    </div>
+
+   </div>
+<div class="section-2">
+<div class="box container">
+  <h2 class="" data-aos="fade-up" data-aos-anchor-placement="top-bottom">WHERE HOME MEETS LUXURIOUS AMENITIES</h2>
+  <p class="mb-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-sine">Whether you prefer to make amazing waterfront memories or turn a profit, La Quinta comes with a slew of luxury hotel-style amenities:</p>
+  <div class="up-elements">
+<div class="element" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-sine">
+<div class="icon"  ><img src="/assets/Home/icons/La-Quinta-Amenities-Lavish-swimming-pools-icon-1.svg.svg" alt="img"></div>
+<div class="textt" >Lavish swimming pools</div>
+</div>
+  <div class="element" data-aos="fade-up" data-aos-duration="1250" data-aos-easing="ease-in-sine">
+    <div class="icon" ><img src="/assets/Home/icons/La-Quinta-Amenities-Steps-from-the-sandy-beach-icon-2.svg" alt="img"></div>
+    <div class="textt" >Steps from the sandy beach    </div>
+    </div>
+    <div class="element" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+      <div class="icon" ><img src="/assets/Home/icons/La-Quinta-Amenities-Panoramic-sea-view-gym-icon-3.svg" alt="img"></div>
+      <div class="textt" >Panoramic sea view gym      </div>
+      </div>
+      <div class="element" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-sine">
+        <div class="icon" ><img src="/assets/Home/icons/La-Quinta-Amenities-Spanish-inspired-beach-lounge-icon-4.svg" alt="img"></div>
+        <div class="textt">Spanish-inspired beach lounge        </div>
+        </div>
+        <div class="element" data-aos="fade-up" data-aos-duration="1250" data-aos-easing="ease-in-sine">
+          <div class="icon"  ><img src="/assets/Home/icons/La-Quinta-Amenities-Exquisite-Spa-icon-5.svg" alt="img"></div>
+          <div class="textt">Exquisite Spa          </div>
+          </div>
+          <div class="element" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+            <div class="icon" ><img src="/assets/Home/icons/La-Quinta-Amenities-24-7-Security-icon-6.svg" alt="img"></div>
+            <div class="textt">24x7 Security            </div>
+            </div>
+
+  </div>
+</div>
+</div>
+<!-- gallery -->
+<div class="gallery container" >
+<h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom">Gallery</h2>
+<div class="first-box">
+<div class="card box-img">
+<p-galleria class="content"
+      [value]="images"
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{ 'max-width': '850px'  }"
+      [numVisible]="5">
+          <ng-template pTemplate="item" let-item>
+              <img [src]="'/assets/Home/gallery/'+item" style="width: 100%;" [alt]="item"/>
+          </ng-template>
+          <ng-template pTemplate="thumbnail" let-item>
+              <div class="grid grid-nogutter justify-content-center">
+                  <img [src]="'/assets/Home/gallery/'+item" alt="img"  style="width: 90%;"/>
+              </div>
+          </ng-template>
+  </p-galleria>
+
+</div>
+</div>
+
+
+</div>
+<div class="section-3">
+<div class="box container">
+  <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom">Prime Location</h2>
+<div class="big-box">
+<div class="map ">
+  <!-- AIzaSyCMk-AqiotULMGGNUIHuBhsf7z91U2nqts -->
+  <google-map
+  height="100%"
+  width="100%"
+  [center]="center"
+  [zoom]="zoom"
+></google-map>
+
+</div>
+<div class="adress shadow rounded">
+  <h2>Address</h2>
+  <div class="pra">El Ahiaa Road, Hurghada, Egypt</div>
+  <h2>Key transport</h2>
+  <p>La Quinta is conveniently located 10 minutes from Hurghada Airport and 10 Minutes from El Gouna, within quick and easy reach of the city attractions and major town areas. At La Quinta, you get the taste of both worlds, calm and serene resort-style living, as well as the buzz of a well known touristic destination.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-5"></div>
+</section>

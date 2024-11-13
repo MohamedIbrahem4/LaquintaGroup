@@ -1,0 +1,217 @@
+:host{
+  font-family: 'DMSerifDisplay';
+}
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'DMSerifDisplay';
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    opacity: 0;
+    .slide-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .slide-content {
+      position: relative;
+      z-index: 1;
+      left: 50px;
+      top: 50px;
+      display: flex;
+      gap: 60px;
+      .left-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        .hr{
+          width: 1px;
+          height: 30vh;
+          background-color: #ffff;
+        }
+        .icon{
+          a{
+            color: #ffff;
+            // transition: color .3s linear;
+            transition: color 0.3s ease-in;
+
+            &:hover{
+              color: #DBB996;
+
+            }
+          }
+          &:hover{
+            a{
+            color: #DBB996;
+
+            }
+          }
+
+        }
+      }
+      .content-1{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .box{
+          display: flex;
+          flex-direction: column;
+          padding-top: 10px;
+
+          span{
+          text-transform: uppercase;
+          font-size: 4em;
+          font-weight: 400;
+          color: #ffff;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          line-height: 1;
+        }
+        p{
+          text-transform: uppercase;
+          font-size: 4em;
+          font-weight: 400;
+          color: #ffff;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          margin: 0px;
+          padding: 0px;
+          line-height: 1;
+
+        }
+        .slid-2{
+          text-transform: uppercase;
+          font-size: 6em;
+          font-weight: 400;
+          color: #ffff;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        }
+        .button{
+
+          button{
+            position: relative; /* Ensures icon moves relative to the button */
+            font-family: BeVietnamPro;
+            min-width: 40px;
+            min-height: 40px;
+            background-color: rgb(189,165,136);
+            border-color:rgb(189,165,136) ;
+            color: #ffff;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 15px 50px;
+            transition: .3s linear;
+            border-radius: 10px;
+            .icon{
+              transition: transform 0.3s ease; /* Smooth transition */
+              margin-left: 2px; /* Space between text and icon */
+
+            }
+            &:hover{
+              color: #ffff;
+              background-color: rgb(210, 180, 91);
+             .icon{
+              transform: translateX(5px); /* Adjust distance as needed */
+            }
+
+            }
+
+          }
+
+        }
+      }
+    }
+   .call-us{
+    position: absolute;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    right: 100px;
+    bottom: 100px;
+    font-family: BeVietnamPro-regular;
+    cursor: pointer;
+    .icon{
+      border: 2px solid #DBB996;
+      border-radius: 50%;
+        padding: 10px;
+        font-size: 1.8rem;
+        color: #ffff;
+        padding-bottom: 3px;
+        padding-top: 5px;
+
+    }
+    .details{
+      font-weight: 400;
+      color: #ffff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+    .d1{
+      font-size: .7em;
+
+    }
+    .d2{
+      font-size: 1.5em;
+    }
+    }
+   }
+  }
+
+}
+
+
+@media (max-width: 650px) {
+  .slider-container{
+    font-size: 48%;
+    .slider{
+      .slide-content{
+        left: 25px;
+        gap: 15px;
+
+        .content-1{
+          gap: 25px;
+
+            .button{
+              button {
+            min-width: 20px;
+            min-height: 20px;
+            padding: 10px 15px;
+            }
+          }
+
+        }
+      }
+      .call-us{
+        position: absolute;
+        z-index: 1;
+        right: 35px;
+        bottom: 20px;
+      }
+
+    }
+  }
+}
+@media (min-width: 650px) and (max-width: 1024px){
+  .slider-container{
+    .slider{
+      .slide-content{
+        gap: 40px;
+      }
+    }
+  }
+}

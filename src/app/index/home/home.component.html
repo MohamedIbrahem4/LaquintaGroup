@@ -1,0 +1,107 @@
+<app-slider></app-slider>
+<section>
+  <div class="who-we-are">
+    <div class="section-1 container">
+      <div class="small-box">
+        <span class="move-up-bootom">Who we are</span>
+        <div>
+          <h2>
+            A PERFECT BLEND
+            <br />
+            OF BREATHTAKING
+            <br />
+            ARCHITECTURE DESIGNS
+          </h2>
+        </div>
+      </div>
+      <div class="big-box">
+        <div class="img-1">
+          <img src="/assets/Index/La-Quinta-who-we-are-left-image.jpg" alt="" />
+        </div>
+        <div class="content">
+          <div class="content-1">
+            <h2>Our missions</h2>
+            <p>
+              To shape the Red Sea region with iconic real estate projects that
+              offer unprecedented lifestyles and inspiring homes.
+            </p>
+          </div>
+          <div class="content-1">
+            <h2>Our vision</h2>
+            <p>
+              To provide high-quality, modern, and nature-friendly housing
+              solutions that cater to diverse needs and preferences of our
+              customers, while ensuring excellence in every stage of our work.
+            </p>
+          </div>
+          <div class="button">
+            <button type="button" class="btn btn-outline-warning">
+              more about us
+              <i class="icon fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
+        </div>
+        <div class="img-2">
+          <img src="/assets/Index/La-Quinta-who-we-are-right-image.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-2 container">
+    <div class="content-1">
+      <span class="move-up-bootom">featured projects.</span>
+      <div class="title">
+        <h2>Where happiness lives</h2>
+        <div>
+          <a href="">
+            <span>view all projects</span>
+            <i class="icon fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </div>
+      <div class="projects">
+        <div class="img-box" *ngFor="let item of project">
+          <img [src]="item.src" alt="" />
+          <div class="content-box">
+            <h2>
+              <a href="">
+                {{ item.h2 }}
+              </a>
+            </h2>
+            <p>{{ item.p }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-3 container">
+    <div class="title " >
+      <span>WHY CHOOSE US.</span>
+      <h2>Your number one choice</h2>
+    </div>
+    <div class="big-box" >
+      <div class="image">
+              <img [src]="currentImage" alt="" [@fadeSlide]="currentIndexs3"/>
+      </div>
+      <div class="left-box">
+
+        <div class="content" [@slideInOut]="currentIndexs3   ">
+                 <div class="svg">
+        <img src="/assets/Index/section3/icons/Home 5 - La Quinta.html" alt="">
+        </div>
+        <h3>{{currentContent.h3}}</h3>
+        <p>{{currentContent.p}}
+        </p>
+        </div>
+        <div class="btn">
+          <button (click)="prevItem()" ><i class="fa-solid fa-chevron-left"></i></button>
+          <button (click)="nextItem()"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-4">
+
+  </div>
+</section>
