@@ -45,19 +45,19 @@ import Aos from 'aos';
 export class SliderComponent implements OnInit {
   slides = [
     {
-      image: '/assets/Index/slider/La-Quinta-slider-1.jpg',
+      image: 'assets/Index/slider/La-Quinta-slider-1.jpg',
       number: '1',
     },
     {
-      image: '/assets/Index/slider/La-Quinta-slider-2.jpg',
+      image: 'assets/Index/slider/La-Quinta-slider-2.jpg',
       number: '2',
     },
     {
-      image: '/assets/Index/slider/La-Quinta-slider-3.jpg',
+      image: 'assets/Index/slider/La-Quinta-slider-3.jpg',
       number: '3',
     },
     {
-      image: '/assets/Index/slider/La-Quinta-slider-4.jpg',
+      image: 'assets/Index/slider/La-Quinta-slider-4.jpg',
       number: '4',
     },
   ];
