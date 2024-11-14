@@ -52,7 +52,6 @@ animationKey = 0; // Unique key to force animation re-trigger
   constructor(private homeservice:HomeServicesService){}
   ngOnInit(): void {
     Aos.init();
-console.log(this.currentIndexs3)
     this.project=this.homeservice.projects;
   }
   get currentImage() {
@@ -62,9 +61,14 @@ console.log(this.currentIndexs3)
     return this.homeservice.section3[this.currentIndexs3];
   }
   nextItem() {
-    this.direction = 'forward';
-    this.animationKey++; // Increment to re-trigger animation
-    this.currentIndexs3 = (this.currentIndexs3 + 1) % this.homeservice.section3.length;
+    if(this.currentIndexs3 < this.homeservice.section3.length-1)
+    {
+      this.currentIndexs3++;
+    }
+    if (this.currentIndexs3 >= this.homeservice.section3.length-1) {
+      this.currentIndexs3 = 0;
+  }
+
 
   }
 

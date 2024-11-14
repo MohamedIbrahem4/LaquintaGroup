@@ -32,8 +32,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "baseHref": "/LaquintaGroup/",
-            "deployUrl": "/LaquintaGroup/",
+            "baseHref": "/LaquintaGroup",
+            "deployUrl": "/LaquintaGroup",
 
             "scripts": []
           },
