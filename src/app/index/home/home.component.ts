@@ -5,6 +5,7 @@ import { HomeServicesService } from '../services/home-services.service';
 import { SliderComponent } from "../../shared/slider/slider.component";
 import { CommonModule } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -47,18 +48,22 @@ project:any[]=[];
 currentIndexs3 = 0;
 direction: 'forward' | 'backward' = 'forward';
 animationKey = 0; // Unique key to force animation re-trigger
+sanitizedContent!: SafeHtml;
 
 
-  constructor(private homeservice:HomeServicesService){}
+  constructor(private homeservice:HomeServicesService,private sanitizer: DomSanitizer){}
   ngOnInit(): void {
     Aos.init();
     this.project=this.homeservice.projects;
+    this.sanitizedContent = this.sanitizer.bypassSecurityTrustHtml(this.homeservice.section3[0].svg);
+
   }
   get currentImage() {
     return this.homeservice.section3[this.currentIndexs3].src;
   }
   get currentContent() {
     return this.homeservice.section3[this.currentIndexs3];
+
   }
   nextItem() {
     if(this.currentIndexs3 < this.homeservice.section3.length-1)
@@ -70,6 +75,11 @@ animationKey = 0; // Unique key to force animation re-trigger
   }
 
 
+  }
+  setCurrentContent(htmlContent: string) {
+    // Use DomSanitizer to mark the HTML as safe
+
+    this.sanitizedContent = this.sanitizer.bypassSecurityTrustHtml(htmlContent);
   }
 
   // Method to navigate to the previous item

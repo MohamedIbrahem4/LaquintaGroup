@@ -1,4 +1,4 @@
-<section class="container-fluid" >
+<section class="container-fluid" [class.hidden]="isScrollingDown">
   <div class="left-box" >
 <div class="test">
     <div class="box" data-aos="fade-right">
@@ -40,3 +40,30 @@
   </div>
 
 </section>
+
+<div class="fixed-nav container-fluid" *ngIf="isScrollingDown">
+  <div class="left-box" >
+<div class="test">
+    <div class="box" data-aos="fade-right">
+<img   src="assets/logo/Laquinta-logo-white-1.png" alt="">
+    </div>
+
+</div>
+  </div>
+  <div class="right-box">
+
+    <div class="down-box">
+    <div class="headers">
+      <a href="">Home</a>
+      <a href="">About us</a>
+      <a href="">Projects</a>
+      <a href="">Insights</a>
+      <a href="">Contact</a>
+
+    </div>
+    </div>
+
+
+  </div>
+
+</div>
