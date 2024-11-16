@@ -41,7 +41,7 @@
 
 </section>
 
-<div class="fixed-nav container-fluid" *ngIf="isScrollingDown">
+<div class="fixed-nav container-fluid" *ngIf="isScrollingDown" [class.hide-on-top]="isAtTop">
   <div class="left-box" >
 <div class="test">
     <div class="box" data-aos="fade-right">
@@ -64,6 +64,14 @@
     </div>
 
 
+  </div>
+
+</div>
+
+<!-- moible header -->
+<div class="mobile-nav"  >
+  <div class="image" data-aos="fade-right">
+    <img   src="assets/logo/Laquinta-logo-white-1.png" alt="">
   </div>
 
 </div>

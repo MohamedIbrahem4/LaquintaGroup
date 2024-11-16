@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import {  Component, HostListener, OnInit } from '@angular/core';
 import  AOS from 'aos';
 @Component({
   selector: 'app-header',
@@ -13,14 +13,14 @@ import  AOS from 'aos';
 export class HeaderComponent implements OnInit  {
   isScrollingDown = false;
   private lastScrollTop = 0;
+  isAtTop = false; // Tracks if the user is at the top of the page
+  isMobile = false;
+  constructor()
+  {}
 
   ngOnInit(): void {
-    AOS.init(
-      {duration: 1200,
-      once: true}
+    AOS.init( );
 
-    );
-    console.log("AOS Initialized");
 
   }
 
@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit  {
   onWindowScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     this.isScrollingDown = scrollTop > this.lastScrollTop;
-    this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative scrolling values
+    this.isAtTop = scrollTop === 0;
   }
 
 

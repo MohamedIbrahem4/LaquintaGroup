@@ -19,11 +19,11 @@ animations:[
   trigger('fadeSlide', [
     transition(':increment', [
       style({ opacity: 0, transform: 'translateX(0%)' }),
-      animate('1s linear', style({ opacity: 1, transform: 'translateX(0)' }))
+      animate('.5s linear', style({ opacity: 1, transform: 'translateX(0)' }))
     ]),
     transition(':decrement', [
       style({ opacity: 0, transform: 'translateX(0%)' }),
-      animate('1s linear', style({ opacity: 1, transform: 'translateX(0)' }))
+      animate('.5s linear', style({ opacity: 1, transform: 'translateX(0)' }))
     ]),
   ]),
   trigger('slideInOut', [
@@ -66,15 +66,7 @@ sanitizedContent!: SafeHtml;
 
   }
   nextItem() {
-    if(this.currentIndexs3 < this.homeservice.section3.length-1)
-    {
-      this.currentIndexs3++;
-    }
-    if (this.currentIndexs3 >= this.homeservice.section3.length-1) {
-      this.currentIndexs3 = 0;
-  }
-
-
+    this.currentIndexs3 = (this.currentIndexs3 - 1 + this.homeservice.section3.length) % this.homeservice.section3.length;
   }
   setCurrentContent(htmlContent: string) {
     // Use DomSanitizer to mark the HTML as safe

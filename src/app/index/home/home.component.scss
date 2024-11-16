@@ -429,7 +429,7 @@ section {
 
 @media (max-width: 650px) {
 section{
-  font-size: 50%;
+  font-size: 70%;
 gap: 60px;
   .who-we-are{
     padding: 70px 0px 0px;
@@ -482,18 +482,27 @@ gap: 60px;
 
       .projects{
         gap: 10px;
+        display: flex;
+        flex-direction: column;
         .img-box{
+          width: 100%;
           img{
-            min-height: 30vh;
+            min-height: 40vh;
+            max-width: 100%;
           }
           .content-box{
-            padding: 10px;
+            padding: 20px;
           }
         }
       }
     }
   }
   .section-3{
+    .title{
+      h2{
+        font-size: 2.6em;
+      }
+    }
     .big-box{
       display: flex;
       flex-direction: column;
@@ -509,9 +518,9 @@ gap: 60px;
         gap: 0px;
         .content{
           min-height: 30vh;
-          padding: 10px;
+          padding: 20px;
           p{
-            font-size: 1.5em;
+            font-size: 1.3em;
           }
         }
         .btn{

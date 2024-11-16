@@ -72,16 +72,21 @@ section
     a{
     text-decoration: none;
     color: rgb(255, 255, 255);
+    font-weight: 600;
+    transition: color .3s linear;
+    &:hover{
+      color: #DBB996;
+    }
+
     }
   }
 
 }
 
   }
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1s ease-in-out;
   &.hidden {
     transform: translateY(-100%);
-    display: none;
   }
 
 
@@ -141,5 +146,36 @@ section
 
 }
 
+  }
+  &:hover{
+    box-shadow: 0 6px 10px rgba(155, 38, 222, 0.15); /* Slightly darker and bigger shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+
+  }
+  &.hide-on-top {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+}
+.mobile-nav{
+  display: none;
+}
+@media (max-width: 650px) {
+  section{
+    display: none;
+  }
+  .fixed-nav{
+    display: none;
+  }
+  .mobile-nav{
+    display: flex !important;
+    background-color: #144a99c7;
+    .image{
+      padding: 10px;
+      img{
+        width: 45%;
+      }
+    }
   }
 }
