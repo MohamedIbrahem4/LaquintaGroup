@@ -1,0 +1,74 @@
+<section>
+  <div class="section-1 container">
+    <div class="content-1 " data-aos="fade-up"
+    data-aos-easing="ease-in-sine"
+    data-aos-duration="1000">
+    <span class="move-up-bootom">
+      Reliable real estate trademark
+    </span>
+    <h2>
+      THE VALUABLE COMMITMENTS
+      <br>
+      BEHIND OUR SUCCESS
+    </h2>
+    </div>
+    <div class="content-2">
+      <div class="card">
+        <p-carousel
+            [value]="icons"
+            [numVisible]="3"
+            [numScroll]="3"
+            [circular]="true"
+            [responsiveOptions]="responsiveOptions"
+            autoplayInterval="9000">
+            <ng-template pTemplate="item" let-item>
+              <div class="box">
+                <div class="svg" [innerHTML]="sanitizedSvgs[icons.indexOf(item)]"></div>
+                <h5>{{ item.Details }}</h5>
+              </div>
+            </ng-template>
+
+        </p-carousel>
+    </div>
+
+    </div>
+
+  </div>
+  <div class="section-2">
+    <div class="big-box container">
+    <div class="image">
+      <img src="assets/Index/La-Quinta-testimonial.jpg" alt="">
+    </div>
+    <div class="content">
+     <div class="header" data-aos="fade-up"
+     data-aos-easing="ease-in-sine"
+     data-aos-duration="1000">
+      <span class="move-up-bootom">
+        TESTIMONIALS
+      </span>
+      <h2>
+        REDEFINING HOMES FOR
+        <br>
+        A BETTER TOMORROW
+      </h2>
+
+     </div>
+     <div class="small-box">
+     <div class="svg" data-aos="fade-right"
+     data-aos-easing="ease-in-sine"
+     data-aos-duration="1500">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 296c0 66.3-53.7 120-120 120l-8 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l8 0c30.9 0 56-25.1 56-56l0-8-64 0c-35.3 0-64-28.7-64-64l0-64c0-35.3 28.7-64 64-64l64 0c35.3 0 64 28.7 64 64l0 32 0 32 0 72zm-256 0c0 66.3-53.7 120-120 120l-8 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l8 0c30.9 0 56-25.1 56-56l0-8-64 0c-35.3 0-64-28.7-64-64l0-64c0-35.3 28.7-64 64-64l64 0c35.3 0 64 28.7 64 64l0 32 0 32 0 72z"/></svg>
+     </div>
+     <div class="Details" data-aos="fade-up"
+     data-aos-easing="ease-in-sine"
+     data-aos-duration="1600">
+      A new story begins once you step into the warm and unique experience of life where every piece was thoughtfully crafted to meet your expectations beginning with the diversity of communities created with a wide range of beautifully designed living spaces, the bespoke available amenities, and the one-of-a-kind locations all blended with peaceful scenic views to offer a contemporary seamless lifestyle.
+     </div>
+     </div>
+
+    </div>
+    </div>
+
+  </div>
+  <div></div>
+</section>

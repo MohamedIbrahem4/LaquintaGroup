@@ -6,6 +6,7 @@ import { SliderComponent } from "../../shared/slider/slider.component";
 import { CommonModule } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { IconSliderComponent } from "../icon-slider/icon-slider.component";
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   imports: [
     ImageModule,
     SliderComponent,
-    CommonModule
+    CommonModule,
+    IconSliderComponent
 ],
 animations:[
   trigger('fadeSlide', [

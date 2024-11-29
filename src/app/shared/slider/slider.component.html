@@ -3,10 +3,10 @@
     class="slider"
     *ngFor="let slide of slides; let i = index; "
     [@slideAnimation]="currentSlide === i ? 'active' : 'inactive'"
-    (click)="nextSlide()"
+    (click)="nextSlide() "
   >
-    <img [src]="slide.image" alt="Slide {{ i + 1 }}" class="slide-image" />
-    <div class="slide-content">
+    <img (click)="$event.stopPropagation()" [src]="slide.image" alt="Slide {{ i + 1 }}" class="slide-image" />
+    <div class="slide-content" (click)="$event.stopPropagation()">
       <div class="left-box">
     <div class="hr"></div>
     <div class="icon"> <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -61,7 +61,7 @@
 
 
   </div>
-  <a class="aos-wrapper" href="tel:+201205285555">
+  <a class="aos-wrapper" href="tel:+201205285555" (click)="$event.stopPropagation()">
      <div class="call-us " data-aos="fade-up" data-aos-easing="ease-in-cubic" data-aos-anchor-placement="top-bottom" data-aos-duration="3000" (click)="callUs()">
     <div class="icon">
       <i class="fa-solid fa-phone-volume"></i>

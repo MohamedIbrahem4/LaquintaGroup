@@ -478,6 +478,9 @@ gap: 60px;
       .title{
         display: flex;
         flex-direction: column;
+        h2{
+          font-size: 2.4em;
+        }
       }
 
       .projects{
@@ -492,6 +495,12 @@ gap: 60px;
           }
           .content-box{
             padding: 20px;
+            h2{
+              font-size: 1.9em;
+            }
+            p{
+              font-size: 1.2em;
+            }
           }
         }
       }
@@ -500,7 +509,7 @@ gap: 60px;
   .section-3{
     .title{
       h2{
-        font-size: 2.6em;
+        font-size: 2.4em;
       }
     }
     .big-box{
@@ -533,4 +542,62 @@ gap: 60px;
   }
 }
 
+}
+@media (min-width: 650px) and (max-width: 1024px){
+  section{
+    .who-we-are{
+      .section-1{
+        .big-box{
+          gap: 50px;
+          padding-bottom: 35px;
+          .img-2{
+            img{
+              right: -3vw;
+            }
+          }
+
+        }
+      }
+    }
+    .section-2{
+      max-width: 100%;
+      padding: 0px 10px !important;
+      &.container{
+        padding: 0px;
+        margin: 0px;
+      }
+      .content-1{
+        .projects{
+          gap: 10px;
+          .img-box{
+            img{
+              min-height: 50vh;
+            }
+          }
+          .content-box{
+            padding: 30px !important;
+          }
+        }
+      }
+    }
+    .section-3{
+      padding: 0px 10px !important;
+      max-width: 100%;
+      &.container{
+        padding: 0px;
+        margin: 0px;
+      }
+      .big-box{
+        .image{
+          img{
+            height: 50vh;
+            object-fit: cover;
+          }
+        }
+        .left-box{
+          gap:  0px;
+        }
+      }
+    }
+  }
 }

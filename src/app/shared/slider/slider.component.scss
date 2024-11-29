@@ -47,7 +47,6 @@
         .icon{
           a{
             color: #ffff;
-            // transition: color .3s linear;
             transition: color 0.3s ease-in;
 
             &:hover{
@@ -117,7 +116,7 @@
             transition: .3s linear;
             border-radius: 10px;
             .icon{
-              transition: transform 0.3s ease; /* Smooth transition */
+              transition: transform 0.3s ease;
               margin-left: 2px; /* Space between text and icon */
 
             }
@@ -178,10 +177,16 @@
 @media (max-width: 650px) {
   .slider-container{
     font-size: 48%;
+    height: 90vh;
     .slider{
       .slide-content{
         left: 25px;
         gap: 15px;
+        .left-box{
+          .icon{
+            font-size: 15px;
+          }
+        }
 
         .content-1{
           gap: 25px;
