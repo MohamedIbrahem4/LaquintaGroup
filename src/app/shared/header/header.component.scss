@@ -184,3 +184,31 @@ section
     }
   }
 }
+@media (min-width: 650px) and (max-width: 1024px){
+  section{
+    .left-box{
+      .test{
+        height: 120px;
+        .box{
+          img{
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+  .fixed-nav{
+    .left-box{
+      .test{
+        width: 30%;
+        padding: 10px;
+        .box{
+          img{
+            width: 60%;
+          }
+        }
+
+      }
+    }
+  }
+}
