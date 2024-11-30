@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import {  Component, HostListener, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import  AOS from 'aos';
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
