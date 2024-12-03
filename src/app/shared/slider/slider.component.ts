@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { animate, group, state, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import Aos from 'aos';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
@@ -63,6 +65,8 @@ export class SliderComponent implements OnInit {
   ];
 
   currentSlide = 0;
+
+  constructor(private route:Router){}
   ngOnInit(): void {
     setInterval(() => {
       this.nextSlide();
@@ -94,6 +98,10 @@ export class SliderComponent implements OnInit {
   }
   callUs() {
     window.location.href = 'tel:+201205285555';
+  }
+  veiwproject(name:string)
+  {
+    this.route.navigate(["/Project",name])
   }
 
 

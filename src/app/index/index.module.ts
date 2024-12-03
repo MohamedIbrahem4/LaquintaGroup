@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent },
+  { path: 'Home', component: HomeComponent,pathMatch:'full' },
 ]
 @NgModule({
   declarations: [],

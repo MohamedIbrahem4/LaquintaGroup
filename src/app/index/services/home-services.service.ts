@@ -23,17 +23,20 @@ export class HomeServicesService {
     {
       src:'assets/projects/La-Quinta-beach.jpg',
       h2:'La Quinta Beach Hurghada',
-      p:'Hurghada, Egypt'
+      p:'Hurghada, Egypt',
+      name: 'La-Quinta-Beach',
     },
     {
       src:'assets/projects/La-Quinta-Featured-projects-2.jpg',
       h2:'La Quinta Suites Hurghada',
-      p:'Hurghada, Egypt'
+      p:'Hurghada, Egypt',
+      name:'La-Quinta-Suites',
     },
     {
       src:'assets/projects/La-Quinta-Heights-3.jpg',
       h2:'La Quinta Heights Hurghada',
-      p:'Hurghada, Egypt'
+      p:'Hurghada, Egypt',
+      name:'La-Quinta-Heights',
     }
   ]
 

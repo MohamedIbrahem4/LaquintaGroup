@@ -17,6 +17,9 @@ export class HeaderComponent implements OnInit  {
   private lastScrollTop = 0;
   isAtTop = false; // Tracks if the user is at the top of the page
   isMobile = false;
+  whatsappNumber: string = '+201205285555';
+preFilledMessage: string = 'Hello, wellcome to La Quinta Group service.';
+
   constructor()
   {}
 
@@ -33,5 +36,9 @@ export class HeaderComponent implements OnInit  {
     this.isAtTop = scrollTop === 0;
   }
 
+  getWhatsAppLink(): string {
+    const encodedMessage = encodeURIComponent(this.preFilledMessage);
+    return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+  }
 
 }

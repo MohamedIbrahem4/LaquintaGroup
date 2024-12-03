@@ -1,0 +1,125 @@
+<section *ngIf="project">
+  <div class="header" [ngStyle]="{'background': 'linear-gradient(0deg, rgba(23, 62, 98, 0.4), rgba(23, 62, 98, 0.4)), url(' + project.src + ')','background-size': 'cover',}" >
+  <h1 data-aos="zoom-in-up"  data-aos-easing="linear" data-aos-duration="1000">{{project.title}}</h1>
+  </div>
+  <div class="section-1 ">
+    <div class="box-1 container">
+   <h3 data-aos="fade-up" data-aos-anchor-placement="top-bottom">Overview</h3>
+    </div>
+    <div class="box-2 container">
+    <div class="content-1" data-aos="fade-right" data-aos-easing="ease-in-sine"      data-aos-offset="200"
+    >
+      <p-image
+      [src]="project.overview.src"
+      [previewImageSizes]="project.overview.src"
+      alt="img"
+      width="100%"
+      [preview]="true" />
+      </div>
+      <div class="content-2" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <b class="type1">
+          {{project.overview.p1}}
+        </b>
+        <p></p>
+    <p class="type2">
+      {{project.overview.p1}}
+    </p>
+      </div>
+      <div class="content-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+     <ul>
+      <li>
+        <span class="title">Status</span>
+        <span class="title2">{{project.overview.statue}}</span>
+      </li>
+      <li>
+        <span class="title">Area</span>
+        <span class="title2">{{project.overview.area}}        </span>
+      </li>
+      <li>
+        <span class="title">Location</span>
+        <span class="title2">{{project.overview.location}}</span>
+      </li>
+      <li>
+        <span class="title">Type</span>
+        <span class="title2">{{project.overview.type}}</span>
+      </li>
+      <li *ngIf="project.overview.beach ">
+        <span class="title">Beach</span>
+        <span class="title2">{{project.overview.beach}}
+        </span>
+      </li>
+      <li *ngIf="project.overview.Delivery ">
+        <span class="title">Delivery</span>
+        <span class="title2">{{project.overview.Delivery}}
+        </span>
+      </li>
+
+
+     </ul>
+      </div>
+    </div>
+
+   </div>
+<div class="section-2">
+<div class="box container">
+  <h2 class="" data-aos="fade-up" data-aos-anchor-placement="top-bottom">{{project.iconssection.header}}</h2>
+  <p class="mb-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-sine">{{project.iconssection.span}}</p>
+  <div class="up-elements" >
+<div class="element" *ngFor="let icon of project.iconssection.icon" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+<div class="icon"  ><img [src]="icon.svg" alt="img"></div>
+<div class="textt" >{{icon.text}}</div>
+</div>
+
+  </div>
+</div>
+</div>
+<!-- gallery -->
+<div class="gallery container" >
+<h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom">Gallery</h2>
+<div class="first-box">
+<div class="card box-img">
+<p-galleria class="content"
+      [value]="project.gallery"
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{ 'max-width': '850px'  }"
+      [numVisible]="5">
+          <ng-template pTemplate="item" let-item>
+              <img [src]="'assets/projects/'+item" style="width: 100%;" [alt]="item"/>
+          </ng-template>
+          <ng-template pTemplate="thumbnail" let-item>
+              <div class="grid grid-nogutter justify-content-center">
+                  <img [src]="'assets/projects/'+item"  style="width: 90%;"/>
+              </div>
+          </ng-template>
+  </p-galleria>
+
+</div>
+</div>
+
+
+</div>
+<div class="section-3">
+<div class="box container">
+  <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom">Prime Location</h2>
+<div class="big-box">
+<div class="map ">
+  <!-- AIzaSyCMk-AqiotULMGGNUIHuBhsf7z91U2nqts -->
+  <google-map
+  height="100%"
+  width="100%"
+  [center]="center"
+  [zoom]="zoom"
+></google-map>
+
+</div>
+<div class="adress shadow rounded">
+  <h2>Address</h2>
+  <div class="pra">{{project.adress}}</div>
+  <h2>Key transport</h2>
+  <p>{{project.transport}}</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-5"></div>
+</section>

@@ -15,19 +15,19 @@
     </div>
     <div class="box-2">
     <div class="icon">
-      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.facebook.com/LaQuintaGroupEgy" target="_blank"><i class="fa-brands fa-facebook"></i></a>
     </div>
     <div class="icon">
-      <a href=""> <i class="fa-brands fa-instagram"></i>      </a>
+      <a href="https://instagram.com/la_quinta_group_egy?igshid=MzRlODBiNWFlZA==" target="_blank"> <i class="fa-brands fa-instagram"></i>      </a>
     </div>
     <div class="icon">
-      <a href=""> <i class="fa-brands fa-whatsapp"></i></a>    </div>
+      <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-whatsapp"></i></a>    </div>
     </div>
     </div>
     <div class="hr"> </div>
     <div class="down-box">
     <div class="headers">
-      <a href="">Home</a>
+      <a [routerLink]="['/Home']" routerLinkActive="router-link-active">Home</a>
       <a [routerLink]="['/Projects']" routerLinkActive="router-link-active" >Projects</a>
       <a href="">Insights</a>
       <a href="">About us</a>
@@ -54,7 +54,7 @@
 
     <div class="down-box">
     <div class="headers">
-      <a href="">Home</a>
+      <a [routerLink]="['/Home']" routerLinkActive="router-link-active">Home</a>
       <a [routerLink]="['/Projects']" routerLinkActive="router-link-active" >Projects</a>
       <a href="">Insights</a>
       <a href="">About us</a>

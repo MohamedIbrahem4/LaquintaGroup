@@ -66,9 +66,9 @@
       <div class="projects">
         <div class="img-box" *ngFor="let item of project">
           <img [src]="item.src" alt="" />
-          <div class="content-box">
-            <h2>
-              <a href="">
+          <div class="content-box" >
+            <h2 (click)="projectdetails(item.name)">
+              <a >
                 {{ item.h2 }}
               </a>
             </h2>

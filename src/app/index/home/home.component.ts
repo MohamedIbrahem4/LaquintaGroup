@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IconSliderComponent } from "../icon-slider/icon-slider.component";
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -53,7 +54,7 @@ animationKey = 0; // Unique key to force animation re-trigger
 sanitizedContent!: SafeHtml;
 
 
-  constructor(private homeservice:HomeServicesService,private sanitizer: DomSanitizer){}
+  constructor(private homeservice:HomeServicesService,private sanitizer: DomSanitizer ,private route:Router){}
   ngOnInit(): void {
     Aos.init();
     this.project=this.homeservice.projects;
@@ -81,6 +82,11 @@ sanitizedContent!: SafeHtml;
     this.direction = 'backward';
     this.animationKey++; // Increment to re-trigger animation
     this.currentIndexs3 = (this.currentIndexs3 - 1 + this.homeservice.section3.length) % this.homeservice.section3.length;
+
+  }
+  projectdetails(name:string)
+  {
+    this.route.navigate(["/Project",name])
 
   }
 
