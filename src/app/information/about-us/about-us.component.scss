@@ -1,0 +1,178 @@
+section
+{
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  .header{
+    background-image:url(/assets/information/La-Quinta-About-us-1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    h1{
+      padding-top: 60px;
+      font-size: 4em;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    h5{
+      color: #ccaf89;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    }
+  }
+  .section-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+width: 50%;
+gap: 20px;
+          h2{
+      color: #795ea9;
+      font-size: 2em;
+    }
+    span{
+      color: #66717A;
+      text-align: center;
+    }
+
+    }
+  }
+  .section-2{
+    .content-1{
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      img{
+       width: 60%;
+      }
+      .img-desk{
+        width: 60%;
+      }
+      .img-mob{
+        display: none;
+      }
+      .box{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        img{
+          width: 80px;
+          height: 80px;
+        }
+        h4{
+          color: #795ea9;
+        }
+        p{
+          color: #66717A;
+        }
+      }
+
+    }
+  }
+
+}
+@media (max-width: 650px) {
+  section{
+    .header{
+      min-height: 30vh;
+      width: 100%;
+      background-position: bottom;
+      h1{
+        font-size: 2em;
+        padding-top: 10px;
+      }
+    }
+    .section-1{
+      .content{
+        width: 100%;
+      }
+    }
+.section-2{
+  .content-1{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    img{
+      width: 100%;
+    }
+    .img-desk{
+      display: none;
+    }
+    .img-mob{
+      display: flex;
+      width: 100%;
+    }
+
+    .box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+  }
+}
+@media (min-width: 650px) and (max-width: 1024px){
+  section{
+    .section-1{
+      .content{
+        width: 80%;
+      }
+    }
+    .section-2{
+      width: 100%;
+      padding: 0px 10px;
+      .content-1{
+        width: 100%;
+        gap: 20px;
+        &.container{
+          padding: 0px;
+          margin: 0px;
+          max-width: none;
+        }
+
+      }
+    }
+  }
+}
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}

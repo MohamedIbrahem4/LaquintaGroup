@@ -37,7 +37,7 @@
             </p>
           </div>
           <div class="button">
-            <button type="button" class="btn btn-outline-warning">
+            <button type="button" class="btn btn-outline-warning" [routerLink]="['/About-Us']" routerLinkActive="router-link-active">
               more about us
               <i class="icon fa-solid fa-arrow-right-long"></i>
             </button>
@@ -57,7 +57,7 @@
       <div class="title">
         <h2>Where happiness lives</h2>
         <div>
-          <a href="">
+          <a [routerLink]="['/Projects']" routerLinkActive="router-link-active">
             <span>view all projects</span>
             <i class="icon fa-solid fa-arrow-right-long"></i>
           </a>
