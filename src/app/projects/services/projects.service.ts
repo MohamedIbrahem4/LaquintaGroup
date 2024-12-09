@@ -167,6 +167,72 @@ export class ProjectsService {
         lat: 0,
         lng: 0
       }
+    },
+    {
+      name: 'La-Quinta-Suites',
+      title: 'La Quinta Suites Hurghada',
+      src: 'assets/projects/La-Quinta-Featured-projects-2.jpg',
+      overview: {
+        src: 'assets/projects/La-Quinta-Featured-projects-2.jpg',
+        p1:'',
+        p2:'',
+        statue: 'Under Construction',
+        area: '20,000 sqm',
+        location: 'Hurghada, Egypt',
+        type: 'Hotel Apartments',
+        beach:'',
+        Delivery:'After 2026'
+
+      },
+      iconssection: {
+        header: 'EXPERIENCE THE STATE-OF-THE-ART AMENITIES.',
+        span: 'A gated community is the perfect balance of luxury and comfort, elevating your standard of living with top-of-the-line amenities',
+        icon: [
+          {
+            svg: 'assets/projects/laquinta-heights/icons/La-Quinta-Amenities-Gated-Community-icon.svg',
+            text: 'Gated Community'
+          },
+          {
+            svg: 'assets/projects/laquinta-heights/icons/Lavish-swimming-pools.svg',
+            text: 'Lavish swimming pools'
+          },
+          {
+            svg: 'assets/projects/laquinta-heights/icons/Fully-integrated-Clubhouse.svg',
+            text: 'Fully-integrated Clubhouse'
+          },
+          {
+            svg: 'assets/projects/laquinta-heights/icons/Exquisite-outdoor-gardens.svg',
+            text: 'Exquisite outdoor gardens'
+          },
+          {
+            svg: 'assets/projects/laquinta-heights/icons/Spacious-parking-slots.svg',
+            text: 'Spacious parking slots'
+          },
+          {
+            svg: 'assets/projects/laquinta-heights/icons/24x7-Security.svg',
+            text: '24x7 Security '
+          }
+        ]
+      },
+      gallery: [
+        'laquinta-suites/gallary/La-Quinta-Suites-1.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-2.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-3.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-4.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-5.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-6.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-7.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-8.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-9.jpg',
+        'laquinta-suites/gallary/La-Quinta-Suites-10.jpg',
+
+      ],
+      adress: '',
+      transport: '',
+      map:{
+        lat: 0,
+        lng: 0
+      }
     }
   ];
 

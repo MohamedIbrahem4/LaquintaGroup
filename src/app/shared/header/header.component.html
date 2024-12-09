@@ -74,5 +74,31 @@
   <div class="image" data-aos="fade-right">
     <img   src="assets/logo/Laquinta-logo-white-1.png" alt="">
   </div>
+  <div class="card flex justify-content-center">
+    <p-sidebar [(visible)]="sidebarVisible" class="sidbar">
+        <h3>La Quinta Group</h3>
+        <div class="nav">
+        <ul>
+          <li>
+            <a [routerLink]="['/Home']" routerLinkActive="router-link-active">Home</a>
+          </li>
+          <li>
+            <a [routerLink]="['/Projects']" routerLinkActive="router-link-active">Projects</a>
+          </li>
+          <li>
+            <a [routerLink]="['/About-Us']" routerLinkActive="router-link-active">About us</a>
+          </li>
+          <li>
+            <a [routerLink]="['/Contact']" routerLinkActive="router-link-active">Contact us</a>
+          </li>
+          <li>
+            <a href="">Insights</a>
+          </li>
+        </ul>
+        </div>
+
+    </p-sidebar>
+    <p-button (onClick)="sidebarVisible = true" icon="pi pi-align-justify    " />
+</div>
 
 </div>
