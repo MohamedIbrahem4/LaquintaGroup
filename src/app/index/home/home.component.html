@@ -18,7 +18,7 @@
       </div>
       <div class="big-box">
         <div class="img-1">
-          <img src="assets/Index/La-Quinta-who-we-are-left-image.jpg" alt="" />
+          <img src="assets/Index/La-Quinta-who-we-are-left-image.jpg" alt="description" loading="lazy" />
         </div>
         <div class="content">
           <div class="content-1">
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="img-2">
-          <img src="assets/Index/La-Quinta-who-we-are-right-image.jpg" alt="" />
+          <img src="assets/Index/La-Quinta-who-we-are-right-image.jpg" alt="description" loading="lazy" />
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@
       </div>
       <div class="projects">
         <div class="img-box" *ngFor="let item of project">
-          <img [src]="item.src" alt="" />
+          <img [src]="item.src" alt="description" loading="lazy" />
           <div class="content-box" >
             <h2 (click)="projectdetails(item.name)">
               <a >

@@ -22,7 +22,7 @@
       <div class="section-2 container">
         @for (project of allproject; track $index) {
           <div class="card shadow-sm " (click)="veiwproject(project.name)">
-            <img [src]="project.src" alt="">
+            <img [src]="project.src" alt="description" loading="lazy">
             <div class="content">
                         <div class="title">
              <h3>{{project.title}}</h3>

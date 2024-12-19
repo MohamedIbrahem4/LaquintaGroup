@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { animate, group, state, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import Aos from 'aos';
@@ -44,7 +44,7 @@ import { Router, RouterModule } from '@angular/router';
 
 
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements OnInit ,OnDestroy {
   slides = [
     {
       image: 'assets/Index/slider/La-Quinta-slider-1.jpg',
@@ -65,18 +65,28 @@ export class SliderComponent implements OnInit {
   ];
 
   currentSlide = 0;
-
+  intervalId: any;
   constructor(private route:Router){}
+  //to clear setinterval when i move from page to another
+  ngOnDestroy(): void {
+    this.stopAutoSlide();
+  }
   ngOnInit(): void {
-    setInterval(() => {
-      this.nextSlide();
-    }, 13000);
-    Aos.init(
-
-
-    );
+    this.startAutoSlide();
+    Aos.init( );
 
   }
+  startAutoSlide() {
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 10000);
+  }
+  stopAutoSlide() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
   nextSlide() {
     this.currentSlide = (this.currentSlide + 1) % this.slides.length;
     const animatedElements = document.querySelectorAll('.aos-wrapper [data-aos]');
@@ -88,11 +98,10 @@ export class SliderComponent implements OnInit {
       animatedElements.forEach((element) => {
         element.classList.add('aos-init', 'aos-animate'); // Re-add both classes
       });
-      Aos.refresh(); // Refresh AOS to ensure animations re-trigger
-    }, 2000); // Adjust the delay as needed
+    },2000); // Adjust the delay as needed
 
     // Refresh AOS to apply the animations on the new slide
-    Aos.refresh();
+     Aos.refresh();
 
 
   }

@@ -1,0 +1,69 @@
+section
+{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  .header{
+    background-image: url(/assets/information/insights/background-blog.jpg);
+    background-position:top center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    h1{
+    color: #fff;
+    font-size: 4em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    }
+  }
+  .section-1{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    .image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .hr{
+      background-color: #e1e1e1;
+      height: 1px;
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h1{
+        color: #795ea9;
+        font-size: 4em;
+      }
+      p{
+        color: #66717a;
+        line-height: 1.8;
+      }
+      h3{
+        color: #795ea9;
+        font-size: 3em;
+      }
+      h2{
+        color: #795ea9;
+        font-size: 2.5em;
+      }
+      h5{
+        color: #795ea9;
+        font-size: 2em;
+      }
+      .small-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+

@@ -3,6 +3,9 @@ import { TooltipModule } from 'primeng/tooltip';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { CommonModule } from '@angular/common';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
 
 @Component({
   selector: 'app-contact-us',
@@ -11,19 +14,23 @@ import { CommonModule } from '@angular/common';
     TooltipModule,
     ReactiveFormsModule,
     InputTextareaModule,
-    CommonModule
+    CommonModule,
+    ToastModule,
+
   ],
+  providers:[MessageService],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss'
 })
 export class ContactUsComponent {
   MailForm: FormGroup = new FormGroup({});
-constructor(    private fb: FormBuilder){
+  SpinerFlag:boolean=false;
+constructor(    private fb: FormBuilder,private messageService:MessageService){
 
   this.MailForm = this.fb.group({
     Name:['',[Validators.required]],
     PhoneNumber:['',[Validators.required]],
-    Subject:['',[]],
+    Subject:['',[Validators.required]],
     Message:['',[Validators.required]]
 
 
@@ -53,19 +60,25 @@ get message()
 Sendmail()
 {
 
-
-
+  this.SpinerFlag=true;
+  const serviceID = 'service_hevtpr7';
+  const templateID = 'template_u1doisr';
+  const userID = 'CRG2c4dkAVGPC8xGA';
   if(this.MailForm.valid )
   {
-    const name = this.name?.value || '';
-    const subject = this.subject?.value || '';
-    const message = this.message?.value || '';
-    const phonenumber=this.phonenumber?.value ||'';
 
-    const mailtoLink = `mailto:Peter.estawro@laquinta-groupegy.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(`Name: ${name}\n PhoneNumber: ${phonenumber}\n\n\n ${message}`)}`;
-    window.location.href = mailtoLink;
+    const formElement = document.getElementById('MailForm') as HTMLFormElement;
+   emailjs.sendForm(serviceID,templateID,formElement,userID) .then(
+    (result: EmailJSResponseStatus) => {
+      this.SpinerFlag=false;
+      this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Your mail send Success', key: 'Su', life: 3000 });
+
+    },
+    (error) => {
+      this.messageService.add({ severity: 'warn', summary: 'Attention please', detail: 'Please try again later', key: 'Wr', life: 3000 });
+
+    }
+  );
 
   }
   else{
