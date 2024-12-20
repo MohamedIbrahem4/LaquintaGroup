@@ -88,7 +88,9 @@
     </div>
     <div class="big-box" >
       <div class="image">
-              <img [src]="currentImage" alt="" [@fadeSlide]="currentIndexs3"/>
+        <p-skeleton *ngIf="!isImageLoaded" />
+
+              <img [style.visibility]="isImageLoaded ? 'visible' : 'hidden'"  (load)="onImageLoad()" [src]="currentImage" alt="image" [@fadeSlide]="currentIndexs3"/>
       </div>
       <div class="left-box">
 

@@ -305,7 +305,15 @@ section {
       .image {
         position: relative;
         z-index: 2;
-
+     ::ng-deep   .p-element{
+      height: 65vh;
+      width: 50vw;
+display: flex;
+        }
+        ::ng-deep  .p-skeleton{
+          width: 100vw !important;
+          height: 65vh  !important;
+        }
         img {
           max-width: 50vw;
         }

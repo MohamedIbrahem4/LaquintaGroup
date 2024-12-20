@@ -7,7 +7,8 @@ import { CommonModule } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IconSliderComponent } from "../icon-slider/icon-slider.component";
-import { Route, Router, RouterModule } from '@angular/router';
+import {  Router, RouterModule } from '@angular/router';
+import { Skeleton, SkeletonModule } from 'primeng/skeleton';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ import { Route, Router, RouterModule } from '@angular/router';
     SliderComponent,
     CommonModule,
     IconSliderComponent,
-    RouterModule
+    RouterModule,
+    SkeletonModule
 ],
 animations:[
   trigger('fadeSlide', [
@@ -53,6 +55,7 @@ currentIndexs3 = 0;
 direction: 'forward' | 'backward' = 'forward';
 animationKey = 0; // Unique key to force animation re-trigger
 sanitizedContent!: SafeHtml;
+isImageLoaded = false;
 
 
   constructor(private homeservice:HomeServicesService,private sanitizer: DomSanitizer ,private route:Router){}
@@ -91,5 +94,10 @@ sanitizedContent!: SafeHtml;
 
   }
 
+  onImageLoad(): void {
+    this.isImageLoaded = true;
+    console.log('Image loaded successfully!');
+
+  }
 
 }

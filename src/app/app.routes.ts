@@ -2,7 +2,7 @@ import {  Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout/layout.component';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/Home' },
+  { path: '', pathMatch: 'full', redirectTo: '' },
   {
     path: '',
     component: LayoutComponent,
