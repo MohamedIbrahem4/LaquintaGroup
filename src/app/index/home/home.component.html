@@ -91,7 +91,7 @@
         <!-- test -->
         <p-skeleton *ngIf="!isImageLoaded" />
 
-              <img [class.hidden]="!isImageLoaded"  (load)="onImageLoad()" [src]="Src" alt="image" [@fadeSlide]="currentIndexs3"/>
+              <img     [style.display]="isImageLoaded ? 'block' : 'none'" (load)="onImageLoad()" [src]="Src" alt="image" [@fadeSlide]="currentIndexs3"/>
       </div>
       <div class="left-box">
 
