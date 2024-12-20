@@ -56,17 +56,18 @@ direction: 'forward' | 'backward' = 'forward';
 animationKey = 0; // Unique key to force animation re-trigger
 sanitizedContent!: SafeHtml;
 isImageLoaded = false;
-
+Src:string='';
 
   constructor(private homeservice:HomeServicesService,private sanitizer: DomSanitizer ,private route:Router){}
   ngOnInit(): void {
     Aos.init();
     this.project=this.homeservice.projects;
     this.sanitizedContent = this.sanitizer.bypassSecurityTrustHtml(this.homeservice.section3[0].svg);
-
+    this.currentImage();
   }
-  get currentImage() {
-    return this.homeservice.section3[this.currentIndexs3].src;
+   currentImage() {
+    this.isImageLoaded=false;
+    this.Src=this.homeservice.section3[this.currentIndexs3].src;
   }
   get currentContent() {
     return this.homeservice.section3[this.currentIndexs3];
@@ -74,10 +75,11 @@ isImageLoaded = false;
   }
   nextItem() {
     this.currentIndexs3 = (this.currentIndexs3 - 1 + this.homeservice.section3.length) % this.homeservice.section3.length;
+    this.currentImage();
+
   }
   setCurrentContent(htmlContent: string) {
     // Use DomSanitizer to mark the HTML as safe
-
     this.sanitizedContent = this.sanitizer.bypassSecurityTrustHtml(htmlContent);
   }
 
@@ -86,6 +88,7 @@ isImageLoaded = false;
     this.direction = 'backward';
     this.animationKey++; // Increment to re-trigger animation
     this.currentIndexs3 = (this.currentIndexs3 - 1 + this.homeservice.section3.length) % this.homeservice.section3.length;
+    this.currentImage();
 
   }
   projectdetails(name:string)
@@ -96,7 +99,6 @@ isImageLoaded = false;
 
   onImageLoad(): void {
     this.isImageLoaded = true;
-    console.log('Image loaded successfully!');
 
   }
 
